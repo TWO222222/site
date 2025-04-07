@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitchen</title>
+    <link rel="stylesheet" href="css files/css.css">
+    <link rel="stylesheet" href="css files/modal.css">
+</head>
+<body>
+
+<! image states from Left to Right !>
+<img src="vid e o and Img/room/roomLeft/room left.jpg" alt="imagetest" id="room" style="opacity: 0;"/>
+<video src="vid e o and Img/Kitchen/kitchenVid.mp4" type="video/mp4" id="kitchen" muted></video>
+
+<! doors !>
+<a href="hallway.html" style="display:block">
+    <div class="clickPoly" id="dor" style="clip-path: polygon(77% 43%, 69% 43%, 69% 70%, 77% 70%);"></div>
+</a>
+
+
+<! modal Window objects !>
+<! Left side !>
+<button onclick="playVidO()">
+    <div class="clickPoly" id="oven" style="clip-path: polygon(94% 60%, 79% 60%, 79% 85%, 93% 85%);"></div>
+</button>
+
+<button  onclick="playVidT()">
+  <div class="clickPoly" id="frige" style="clip-path: polygon(26% 64%, 26% 70%, 60% 70%, 60% 64%);"></div>
+</button>
+
+<button onclick="playVidF()">
+  <div class="clickPoly" id="flower" style="clip-path: polygon(10% 40%, 22% 40%, 22% 83%, 10% 83%);"></div>
+</button>
+
+
+<button id="myBtn">
+  <div class="clickPoly" id="table" style="clip-path: polygon(45% 48%, 45% 40%, 49% 40%, 49% 48%);"></div>
+</button>
+
+
+
+
+<storage>
+
+<! for the pokemon !>
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        
+        <h2>Flower?</h2>
+      </div>
+        <div class="modal-body">
+          <br>
+          <div class="imgFlx">
+            <img src="vid e o and Img/Kitchen/flower.jpg" alt="sanwhich" style="width:450px;height:450px;">
+            <p class="imgFlxP">an illusion of a flower... who would do such a thing. what purpose does it serve and what were there goals with such a contraption<br>
+              <br>truly a mystery...
+              </p>
+          </div>
+          <br>
+        </div>
+    </div>
+  </div>
+
+</storage>
+
+
+<script>
+    const kit = document.getElementById('kitchen')
+    const room = document.getElementById('room')
+    document.getElementById('dor').style.height = room.height + ('px');
+    document.getElementById('oven').style.height = room.height + ('px');
+    document.getElementById('table').style.height = room.height + ('px');
+    document.getElementById('frige').style.height = room.height + ('px');
+    document.getElementById('flower').style.height = room.height + ('px');
+
+    setInterval(function() {
+      document.getElementById('dor').style.height = room.height + ('px');
+      document.getElementById('oven').style.height = room.height + ('px');
+      document.getElementById('table').style.height = room.height + ('px');
+      document.getElementById('frige').style.height = room.height + ('px');
+      document.getElementById('flower').style.height = room.height + ('px');
+    }, 1000);
+
+
+
+
+
+    var modal = document.getElementById("myModal");
+
+    var btn = document.getElementById("myBtn");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+
+
+    function playVidO() {
+      kit.currentTime = 0;
+      kit.play();
+      setTimeout(function(){
+        kit.pause();
+        kit.currentTime = 0;
+        },1350)  
+    }
+
+    function playVidT() {
+      kit.currentTime = 1.37;
+      kit.play();
+      setTimeout(function(){
+        kit.pause();
+        kit.currentTime = 0;
+        },1800)  
+    }
+
+    function playVidF() {
+      kit.currentTime = 3.1;
+      kit.play();
+      setTimeout(function(){
+        kit.pause();
+        kit.currentTime = 0;
+        },800)  
+    }
+
+    sessionStorage.setItem('time', 0.2)
+
+</script>
+
+</body>

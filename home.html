@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RooM</title>
+    <link rel="stylesheet" href="css files/css.css">
+    <link rel="stylesheet" href="css files/modal.css">
+</head>
+<body>
+
+<! image states from Left to Right !>
+<img src="vid e o and Img/room/roomLeft/room left.jpg" alt="imagetest" id="room"/>
+<video src="vid e o and Img/room/room tour.mp4" alt="imagetest" id="roomT" hidden muted autoplay></video>
+<video src="vid e o and Img/room/room tour R.mp4" alt="imagetest" id="roomTr" hidden muted autoplay></video> <! reversed !>
+<img src="vid e o and Img/room/roomRight/room right.jpg" alt="imagetest" id="roomR" hidden/>
+
+
+
+
+
+<! doors !>
+<! add later door animation !>
+<a href="hallway.html" style="display:block">
+    <div class="clickPoly" id="dor" style="clip-path: polygon(45% 19%, 37% 24%, 38% 55%, 45% 50%);"></div>
+</a>
+
+<a href="hallway.html" style="display:block">
+  <div class="clickPoly" id="dorR" style="clip-path: polygon(57% 20%, 64.5% 25%, 63.5% 56.5%, 56.5% 51%);" hidden></div>
+</a>
+
+
+
+
+<div class="clickPoly" id="dow" style="clip-path: polygon(67.5% 24.5%, 61.5% 21%, 61% 32%, 67% 36%);"></div>
+
+
+<! modal Window objects !>
+<! Left side !>
+<button id="myBtn">
+    <div class="clickPoly" id="por" style="clip-path: polygon(52% 8%, 48% 8%, 48% 14%, 52% 14%);"></div>
+</button>
+
+<button id="myBtn2">
+    <div class="clickPoly" id="car" style="clip-path: polygon(50.5% 39%, 50.5% 35%, 53.5% 35%, 53.5% 39%);"></div>
+</button>
+
+<! both sides !>
+<button id="myBtn3">
+  <div class="clickTri" id="triL" style="clip-path: polygon(0% 90%, 0% 10%, 5% 50%);"></div> 
+</button>
+
+<button id="myBtn4">
+  <div class="clickTri" id="triR" style="clip-path: polygon(100% 90%, 100% 10%, 95% 50%);"></div>
+</button>
+
+<! right side !>
+<button id="myBtn5">
+  <div class="clickPoly" id="post" style="clip-path: polygon(33% 17.5%, 39.5% 14%, 40% 35%, 33.8% 39%);" hidden></div>
+</button>
+<button id="myBtn6">
+  <div class="clickPoly" id="burg" style="clip-path: polygon(41.5% 48.5%, 43.2% 48.5%, 43.2% 52%, 41.5% 52%);" hidden></div>
+</button>
+<button id="myBtn7">
+  <div class="clickPoly" id="garb" style="clip-path: polygon(27% 49%, 30.4% 45.1%, 34.8% 47.2%, 31.5% 50.7%);" hidden></div>
+</button>
+<!modal window storage !>
+<storage>
+
+<! for the pokemon !>
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Some kind of Duck</h2>
+      </div>
+      <div class="modal-body">
+        <br>
+        <div class="imgFlx">
+          <img src="vid e o and Img/room/roomLeft/duck.jpg" alt="sanwhich" style="width:450px;height:400px;">
+          <p class="imgFlxP">this is some kind of duck not sure which but im sure its pretty cool if its hanging out up there</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <! for the cards !>
+  <div id="myModal2" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close2">&times;</span>
+        <h2>Pokemon Cards</h2>
+        
+      </div>
+      
+      <div class="modal-body">
+        
+        <br>
+        <div class="imgFlx">
+            <img src="vid e o and Img/room/roomLeft/Card.jpg" alt="card" style="width:450px;height:450px;">
+            <p class="imgFlxP">Part of a larger purpose </p>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+  <! poster !>
+  <div id="myModal5" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close5">&times;</span>
+        <h2>Poster</h2>
+        
+      </div>
+      
+      <div class="modal-body">
+        
+        <br>
+        <div class="imgFlx">
+            <img src="vid e o and Img/room/roomRight/poster(from room).png" alt="card" style="height:450px;">
+            <p class="imgFlxP">A poster with the Text "Blue Blues" i'm not sure what it could mean or when it was made </p>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+  <! burg !>
+  <div id="myModal6" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close6">&times;</span>
+        <h2>BURGER BURGER BURGER</h2>
+        
+      </div>
+      
+      <div class="modal-body">
+        
+        <br>
+        <div class="imgFlx">
+            <img src="vid e o and Img/room/roomRight/burgy anime.gif" alt="card" style="width:450px;height:450px;">
+            <p class="imgFlxP">
+              how to make this yummy burger only avalible for a limited time while supplies last<br>
+              <br>Recipe:<br>bun<br>cheese<br>meat(any kind)<br>tomato<br>other bun 
+            </p>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+  <! the garb bin !>
+  <div id="myModal7" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close7">&times;</span>
+        <h2>Garbage bin</h2>
+        
+      </div>
+      
+      <div class="modal-body">
+        
+        <br>
+        <div class="imgFlx">
+            <p class="imgFlxP">It's empty maybe in another world you'd find somthing useful here </p>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</storage>
+
+
+<script>
+    
+    const room = document.getElementById('room')
+    
+    setInterval(function() {
+      if (clickCount == 0) {
+          document.getElementById('dor').style.height = room.height + ('px');
+          document.getElementById('por').style.height = room.height + ('px');
+          document.getElementById('dow').style.height = room.height + ('px');
+          document.getElementById('car').style.height = room.height + ('px');
+
+          document.getElementById('triL').style.height = room.height + ('px');
+          document.getElementById('triR').style.height = room.height + ('px');
+        }
+        else if (clickCount == 1){
+          document.getElementById('dor').style.height = roomTr.height + ('px');
+          document.getElementById('por').style.height = roomTr.height + ('px');
+          document.getElementById('dow').style.height = roomTr.height + ('px');
+          document.getElementById('car').style.height = roomTr.height + ('px');
+
+          document.getElementById('dorR').style.height = roomT.height + ('px');
+          document.getElementById('post').style.height = roomT.height + ('px');
+          document.getElementById('burg').style.height = roomT.height + ('px');
+          document.getElementById('garb').style.height = roomT.height + ('px');
+
+        }
+        else {
+          document.getElementById('dorR').style.height = roomR.height + ('px');
+          document.getElementById('post').style.height = roomR.height + ('px');
+          document.getElementById('burg').style.height = roomR.height + ('px');
+          document.getElementById('garb').style.height = roomR.height + ('px');
+
+          document.getElementById('triL').style.height = roomR.height + ('px');
+          document.getElementById('triR').style.height = roomR.height + ('px');
+        }
+    }, 1000);
+
+
+
+
+
+    var modal = document.getElementById("myModal");
+    var modal2 = document.getElementById("myModal2");
+    var modal5 = document.getElementById("myModal5");
+    var modal6 = document.getElementById("myModal6");
+    var modal7 = document.getElementById("myModal7");
+
+    // Get the button
+    var btn = document.getElementById("myBtn");
+    var btn2 = document.getElementById("myBtn2");
+    var btn3 = document.getElementById("myBtn3");
+    var btn4 = document.getElementById("myBtn4");
+    var btn5 = document.getElementById("myBtn5");
+    var btn6 = document.getElementById("myBtn6");
+    var btn7 = document.getElementById("myBtn7");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    var span2 = document.getElementsByClassName("close2")[0];
+    var span5 = document.getElementsByClassName("close5")[0];
+    var span6 = document.getElementsByClassName("close6")[0];
+    var span7 = document.getElementsByClassName("close7")[0];
+
+    // When the user clicks the poly/button
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+    btn2.onclick = function() {
+    modal2.style.display = "block";
+    }
+    btn5.onclick = function() {
+    modal5.style.display = "block";
+    }
+    btn6.onclick = function() {
+    modal6.style.display = "block";
+    }
+    btn7.onclick = function() {
+    modal7.style.display = "block";
+    }
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+    span2.onclick = function() {
+    modal2.style.display = "none";
+    }
+    span5.onclick = function() {
+    modal5.style.display = "none";
+    }
+    span6.onclick = function() {
+    modal6.style.display = "none";
+    }
+    span7.onclick = function() {
+    modal7.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+    if (event.target == modal5) {
+        modal5.style.display = "none";
+    }
+    if (event.target == modal6) {
+        modal6.style.display = "none";
+    }
+    if (event.target == modal7) {
+        modal7.style.display = "none";
+    }
+    }
+
+
+    // for the transition between room sides
+    var clickCount = 0;
+
+    btn4.onclick = function() {
+      if (clickCount == 0){
+        clickCount += 1;
+        document.getElementById('room').style.display = 'none';
+        document.getElementById('dor').style.display = 'none';
+        document.getElementById('por').style.display = 'none';
+        document.getElementById('dow').style.display = 'none';
+        document.getElementById('car').style.display = 'none';
+        document.getElementById('roomT').currentTime = 0;
+        document.getElementById('roomT').style.display = 'block';
+        setTimeout(function(){
+          clickCount += 1;
+          
+          document.getElementById('roomT').style.display = 'none';
+          document.getElementById('roomR').style.display = 'block';
+          document.getElementById('dorR').style.display = 'block';
+          document.getElementById('post').style.display = 'block';
+          document.getElementById('burg').style.display = 'block';
+          document.getElementById('garb').style.display = 'block';
+        },5400)
+      }
+      else {
+        console.log(clickCount);
+      }
+    }
+
+
+    btn3.onclick = function() {
+      if (clickCount == 2){
+        clickCount -= 1;
+        document.getElementById('roomR').style.display = 'none';
+        document.getElementById('dorR').style.display = 'none';
+        document.getElementById('post').style.display = 'none';
+        document.getElementById('burg').style.display = 'none';
+        document.getElementById('garb').style.display = 'none';
+        document.getElementById('roomTr').currentTime = 0.35;
+        document.getElementById('roomTr').style.display = 'block';
+        setTimeout(function(){
+            clickCount -= 1;
+            document.getElementById('roomTr').style.display = 'none';
+            document.getElementById('room').style.display = 'block';
+            document.getElementById('dor').style.display = 'block';
+            document.getElementById('por').style.display = 'block';
+            document.getElementById('dow').style.display = 'block';
+            document.getElementById('car').style.display = 'block';
+          },5400)
+        }
+        else {
+          console.log(clickCount);
+      }
+    }
+
+
+    sessionStorage.setItem('time', 0.7)
+
+</script>
+
+</body>

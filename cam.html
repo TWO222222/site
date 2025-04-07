@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camera's</title>
+    <link rel="stylesheet" href="css files/css.css">
+    <link rel="stylesheet" href="css files/modal.css">
+    <link rel="stylesheet" href="css files/need.css">
+</head>
+<body>
+
+<! image states from Left to Right !>
+<img src="vid e o and Img/camroom/allOff.jpg" alt="imagetest" id="none"/>
+<! represents variations !>
+<img src="vid e o and Img/camroom/screenAon.jpg" alt="imagetest" id="A" hidden/>
+<img src="vid e o and Img/camroom/screenBon.jpg" alt="imagetest" id="B" hidden/>
+<img src="vid e o and Img/camroom/screenCon.jpg" alt="imagetest" id="C" hidden/>
+<img src="vid e o and Img/camroom/screenABon.jpg" alt="imagetest" id="AB" hidden/>
+<img src="vid e o and Img/camroom/screenACon.jpg" alt="imagetest" id="AC" hidden/>
+<img src="vid e o and Img/camroom/screenBCon.jpg" alt="imagetest" id="BC" hidden/>
+<img src="vid e o and Img/camroom/screenABCon.jpg" alt="imagetest" id="ABC" hidden/>
+
+<img src="vid e o and Img/camroom/bord unlit.jpg" alt="imagetest" id="un" hidden/>
+<img src="vid e o and Img/camroom/bord lit.jpg" alt="imagetest" id="lit" hidden/>
+
+
+
+
+<! screens !>
+<button id="BtnA">
+  <div class="clickPoly" id="ScrA" style="clip-path: polygon(45% 30%, 33% 30%, 33% 45%, 45% 45%);"></div>
+</button>
+<button id="BtnB">
+<div class="clickPoly" id="ScrB" style="clip-path: polygon(68% 39.5%, 62% 39.5%, 62% 48%, 68% 48%);"></div>
+</button>
+<button id="BtnC">
+<div class="clickPoly" id="ScrC" style="clip-path: polygon(28% 83%, 24% 83%, 24% 89.5%, 28% 90%);"></div>
+</button>
+
+<! cork !>
+<button id="Btn">
+  <div class="clickPoly" id="board" style="clip-path: polygon(90% 64%, 90% 14%, 80% 18%, 80% 56%);"></div>
+</button>
+
+<! leaves room !>
+<a href="hallway.html" style="display:block">
+  <div class="clickTri" id="triL" style="clip-path: polygon(20% 100%, 50% 95%, 80% 100%);"></div> 
+</a>
+
+<button id="Btn2">
+  <div class="clickTri" id="borg" style="clip-path: polygon(20% 100%, 50% 95%, 80% 100%);" hidden></div>
+</button>
+
+
+<script>
+    
+    const room = document.getElementById('room')
+    document.getElementById('ScrA').style.height = none.height + ('px');
+    document.getElementById('ScrB').style.height = none.height + ('px');
+    document.getElementById('ScrC').style.height = none.height + ('px');
+    document.getElementById('board').style.height = none.height + ('px');
+    document.getElementById('triL').style.height = none.height + ('px');
+    document.getElementById('borg').style.height = none.height + ('px');
+    setInterval(function() {
+      document.getElementById('ScrA').style.height = none.height + ('px');
+      document.getElementById('ScrB').style.height = none.height + ('px');
+      document.getElementById('ScrC').style.height = none.height + ('px');
+      document.getElementById('board').style.height = none.height + ('px');
+      document.getElementById('triL').style.height = none.height + ('px');
+      document.getElementById('borg').style.height = none.height + ('px');
+    }, 100);
+
+
+
+    // Get the button
+    var btnA = document.getElementById("BtnA");
+    var btnB = document.getElementById("BtnB");
+    var btnC = document.getElementById("BtnC");
+    var btn = document.getElementById("Btn");
+    var btn2 = document.getElementById("Btn2");
+
+    // for the transition between room sides
+    var clickCount = 0;
+    var A = 0;
+    var B = 0;
+    var C = 0;
+
+    btnA.onclick = function() {
+      if (A == 1) {
+        if(B == 0 && C == 0) {
+          document.getElementById('A').style.display = 'none';
+          A -= 1;
+        }
+        else if(B == 1 && C == 0) {
+          document.getElementById('AB').style.display = 'none';
+          document.getElementById('B').style.display = 'block';
+          A -= 1;
+        }
+        else if(B == 0 && C == 1) {
+          document.getElementById('AC').style.display = 'none';
+          document.getElementById('C').style.display = 'block';
+          A -= 1;
+        }
+        else if(B == 1 && C == 1) {
+          document.getElementById('ABC').style.display = 'none';
+          document.getElementById('BC').style.display = 'block';
+          A -= 1;
+        }
+      }
+      else if(B == 0 && C == 0) {
+        document.getElementById('A').style.display = 'block';
+        A += 1;
+      }
+      else if(B == 1 && C == 0) {
+        document.getElementById('B').style.display = 'none';
+        document.getElementById('AB').style.display = 'block';
+        A += 1;
+      }
+      else if(B == 0 && C == 1) {
+          document.getElementById('C').style.display = 'none';
+          document.getElementById('AC').style.display = 'block';
+          A += 1;
+        }
+      else if(B == 1 && C == 1) {
+        document.getElementById('BC').style.display = 'none';
+        document.getElementById('ABC').style.display = 'block';
+        A += 1;
+      }
+    }
+
+    btnB.onclick = function() {
+      if (B == 1) {
+        if(A == 0 && C == 0) {
+          document.getElementById('B').style.display = 'none';
+          B -= 1;
+        }
+        else if(A == 1 && C == 0) {
+          document.getElementById('AB').style.display = 'none';
+          document.getElementById('A').style.display = 'block';
+          B -= 1;
+        }
+        else if(A == 0 && C == 1) {
+          document.getElementById('BC').style.display = 'none';
+          document.getElementById('C').style.display = 'block';
+          B -= 1;
+        }
+        else if(A == 1 && C == 1) {
+          document.getElementById('ABC').style.display = 'none';
+          document.getElementById('AC').style.display = 'block';
+          B -= 1;
+        }
+      }
+      else if(A == 0 && C == 0) {
+        document.getElementById('B').style.display = 'block';
+        B += 1;
+      }
+      else if(A == 1 && C == 0) {
+        document.getElementById('A').style.display = 'none';
+        document.getElementById('AB').style.display = 'block';
+        B += 1;
+      }
+      else if(A == 0 && C == 1) {
+          document.getElementById('C').style.display = 'none';
+          document.getElementById('BC').style.display = 'block';
+          B += 1;
+        }
+      else if(A == 1 && C == 1) {
+        document.getElementById('AC').style.display = 'none';
+        document.getElementById('ABC').style.display = 'block';
+        B += 1;
+      }
+    }
+
+    btnC.onclick = function() {
+      if (C == 1) {
+        if(B == 0 && A == 0) {
+          document.getElementById('C').style.display = 'none';
+          C -= 1;
+        }
+        else if(B == 1 && A == 0) {
+          document.getElementById('BC').style.display = 'none';
+          document.getElementById('B').style.display = 'block';
+          C -= 1;
+        }
+        else if(B == 0 && A == 1) {
+          document.getElementById('AC').style.display = 'none';
+          document.getElementById('A').style.display = 'block';
+          C -= 1;
+        }
+        else if(B == 1 && A == 1) {
+          document.getElementById('ABC').style.display = 'none';
+          document.getElementById('AB').style.display = 'block';
+          C -= 1;
+        }
+      }
+      else if(B == 0 && A == 0) {
+        document.getElementById('C').style.display = 'block';
+        C += 1;
+      }
+      else if(B == 1 && A == 0) {
+        document.getElementById('B').style.display = 'none';
+        document.getElementById('BC').style.display = 'block';
+        C += 1;
+      }
+      else if(B == 0 && A == 1) {
+          document.getElementById('A').style.display = 'none';
+          document.getElementById('AC').style.display = 'block';
+          C += 1;
+        }
+      else if(B == 1 && A == 1) {
+        document.getElementById('AB').style.display = 'none';
+        document.getElementById('ABC').style.display = 'block';
+        C += 1;
+      }
+    }
+
+    btn.onclick = function() {
+        document.getElementById('ScrA').style.display = 'none';
+        document.getElementById('ScrB').style.display = 'none';
+        document.getElementById('ScrC').style.display = 'none';
+        document.getElementById('board').style.display = 'none';
+        document.getElementById('triL').style.display = 'none';
+
+        document.getElementById('un').style.display = 'block';
+        document.getElementById('borg').style.display = 'block';
+        console.log("yoooo");
+    }
+
+    btn2.onclick = function() {
+      document.getElementById('ScrA').style.display = 'block';
+      document.getElementById('ScrB').style.display = 'block';
+      document.getElementById('ScrC').style.display = 'block';
+      document.getElementById('board').style.display = 'block';
+      document.getElementById('triL').style.display = 'block';
+
+      document.getElementById('un').style.display = 'none';
+      document.getElementById('borg').style.display = 'none';
+    
+    }
+
+    sessionStorage.setItem('time', 0.2)
+
+</script>
+
+</body>
